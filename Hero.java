@@ -1,4 +1,4 @@
-public class Hero {
+public class Hero implements Comparable <Hero> {
 
     // attributs
     private String name;
@@ -27,4 +27,12 @@ public class Hero {
     public void setAge(int age) {
         this.age = age;
     }
+    @Override
+    public int compareTo(Hero other) {
+     //trions les employés selon leur age dans l'ordre croiddant
+     //retroune un entier négative, zéro ou positive si l'age 
+     //de cet employé est moins que, égale à ou supérieur à l'objet comparé avec
+           return name.compareTo(other.getName());
+    }
+
 }
